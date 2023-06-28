@@ -1,0 +1,41 @@
+.dice {
+    height: 120px;
+    width: 120px;
+    margin: 10px auto auto auto;
+    background-color: rgb(129, 36, 29);
+    border-radius: 25px;
+    padding: 10px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 10px;
+}
+
+.dot {
+    background-color: white;
+    border-radius: 50%;
+}
+
+.bg-white-80pct {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    box-shadow: 10px 10px 10px 4px rgba(0, 0, 0, 0.05), -10px -10px 10px 4px rgba(0, 0, 0, 0.05), -10px 10px 10px 4px rgba(0, 0, 0, 0.05), 10px -10px 10px 4px rgba(0, 0, 0, 0.05);
+}
+
+.aspect-cover {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.car-slide-grid {
+    display: grid;
+    margin: 10px;
+}
+
+#car-grid-1 {
+    grid-template: 50% 50% / 
+    repeat(3, 33.33333%);
+    grid-template-areas: 
+    "A A A B"
+    "C D E E";
+}

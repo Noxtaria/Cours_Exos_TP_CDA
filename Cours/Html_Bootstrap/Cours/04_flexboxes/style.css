@@ -1,0 +1,62 @@
+body, html {
+  margin: 0;
+}
+
+.flex-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: row; /* row(defaut) | row-reverse |column | column-reverse */
+  flex-wrap: nowrap; /* wrap | nowrap(defaut) */
+
+  /* Si l'on veut se passer des deux lignes au dessus,
+  on peut se servir de flex-flow de la sorte : */
+  /* flex-flow: row wrap;  */
+
+  gap: 1rem 2rem;
+
+  justify-content: space-evenly; /* flex-start, left(defaut) | center | flex-end, right [ space-around | space-between | space-evenly */
+  align-items: center; /* flex-start, center, flex-end, stretch */
+}
+
+.flex-item {
+  /* width: 100px; */
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100px;
+  flex: 1 1 100px; /* Via la propriété 'flex' tout court, 
+  on peut ajouter les uns après les autre le grow, le shrink et le basis */
+}
+
+/* Pour cibler les enfants pairs ou impairs, on peut utiliser 
+la pseudo-classe :nth-child(even | odd) */
+.flex-item:nth-child(4n) {
+  background-color: red;
+  /* order: 2; 
+  align-self: flex-start; */
+  /* Par défaut, les élément ont un ordre de 0, et chaque élément ayant le même 
+  ordre va se placer selon l'ordre dans la structure HTML */
+}
+
+/* Pour cibler les enfants tous les X fois, on peut utiliser une 
+valeur de style 'Xn' dans la pseudo-classe :nth-child() */
+.flex-item:nth-child(4n-1) {
+  background-color: blue;
+
+  /* La capacité des élément dans un display FLEX de 
+  grandir pour prendre plus de place s'il y en a */
+  flex-grow: 5; 
+
+  /* order: -1;
+  align-self: flex-end; */
+}
+
+.flex-item:nth-child(4n-2) {
+  background-color: green;
+  flex-shrink: 10;
+  /* align-self: stretch; */
+}
+
+.flex-item:nth-child(4n-3) {
+  background-color: yellow;
+}
+

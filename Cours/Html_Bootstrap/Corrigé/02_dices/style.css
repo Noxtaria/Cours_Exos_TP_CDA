@@ -1,0 +1,41 @@
+div[id^="dice"] {
+  display: inline-block;
+  position: relative;
+  margin: 25px;
+  height: 200px;
+  width: 200px;
+  background-color: beige;
+  border-radius: 25px;
+}
+
+div[id^="dice"] > div {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: red;
+}
+
+div[id^="dice"] > div[class^="top"] {
+  top: 10%;
+}
+
+div[id^="dice"] > div[class^="bottom"] {
+  bottom: 10%;
+}
+
+div[id^="dice"] > div[class^="middle"] {
+  top: calc(50% - 25px);
+}
+
+div[id^="dice"] > div[class$="center"] {
+  left: calc(50% - 25px);
+}
+
+div[id^="dice"] > div[class$="left"] {
+  left: 10%;
+}
+
+div[id^="dice"] > div[class$="right"] {
+  right: 10%;
+}

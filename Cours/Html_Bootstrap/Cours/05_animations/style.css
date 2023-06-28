@@ -1,0 +1,64 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#animated-box {
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  /* animation-name: mon-animation;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;  */
+  /* linear | ease | ease-in | ease-out | ease-in-out */
+  /* animation-iteration-count: 1;  */
+  /* valeur en dure ou 'infinite' */
+  /* animation-delay: 2s; */
+  /* animation-direction: alternate-reverse; */
+
+  animation: mon-animation 3s ease-in-out 2s infinite alternate;
+  /* <nom> <durée> <fonction> <delai> <répétitions> <sens> */
+
+  animation-fill-mode: forwards;
+}
+
+/* @keyframes mon-animation {
+  from {
+    transform: scale(1) rotate(0turn);
+    background-color: red;
+
+  }
+  to {
+    transform: scale(2) rotate(1turn);
+    background-color: green;
+  }
+} */
+
+@keyframes mon-animation {
+  0% {
+    transform: scale(1) rotate(0turn);
+    background-color: red;
+  }
+
+  20%, 80% {
+    background-color: blue;
+  }
+
+  50% {
+    background-color: transparent;
+  }
+
+  100% {
+    transform: scale(2) rotate(1turn);
+    background-color: green;
+  }
+}

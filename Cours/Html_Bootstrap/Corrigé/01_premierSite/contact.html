@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Accueil</title>
+</head>
+<body>
+  <header>
+    <span id="website-title">Antoine DIEUDONNE</span>
+    <h1>Contact</h1>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Accueil</a></li>
+        <li><a href="./schedule.html">Horaires</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <form action="mailto:a@b.com" method="post">
+      <fieldset>
+        <legend>Qui êtes-vous ?</legend>
+        <div class="form-item">
+          <label for="lastname">Nom : </label>
+          <input type="text" name="lastname" id="lastname" placeholder="DUPONT" required>
+        </div>
+
+        <div class="form-item">
+          <label for="firstname">Prénom : </label>
+          <input type="text" name="firstname" id="firstname" placeholder="Sarah" required>
+        </div>
+
+        <div class="form-item">
+          <label for="birthDate">Date de naissance : </label>
+          <input type="date" name="birthDate" id="birthDate" placeholder="DUPONT" required min="1822-12-06" max="2022-12-06">
+        </div>
+
+        <div class="form-item">
+          <label>Nom : </label>
+          <input type="radio" name="gender" id="genderMale" value="male">
+          <label for="genderMale">Homme</label>
+          <input type="radio" name="gender" id="genderFemale" value="female">
+          <label for="genderFemale">Femme</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Sujet de votre question</legend>
+        <div class="form-item">
+          <label for="urgency">Est-ce urgent ? </label>
+          <input type="checkbox" name="urgency" id="urgency">
+        </div>
+        <div class="form-item">
+          <label for="problemType">Type de problème : </label>
+          <select name="problemType" id="problemType">
+            <option value="account">Je n'arrive pas à accéder à mon compte</option>
+            <option value="character">J'ai perdu mes personnages</option>
+            <option value="password">J'ai perdu mon mot de passe'</option>
+          </select>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Commentaire</legend>
+        <label for="notes">Notes :</label> <br>
+        <textarea name="notes" id="notes"></textarea>
+      </fieldset>
+      <button id="submit-button">Envoyer ma question</button>
+    </form>
+  </main>
+</body>
+</html>

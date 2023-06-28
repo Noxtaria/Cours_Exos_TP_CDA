@@ -1,0 +1,94 @@
+@keyframes rotation-full {
+  from { transform: rotate(0turn);}
+  to { transform: rotate(1turn);}
+}
+
+@keyframes scaling-125 {
+  from {transform: scale(1);}
+  to { transform: scale(1.25);}
+}
+
+@keyframes color-to-E7EA6B {
+  to { color: #E7EA6B;}
+}
+
+.container {
+  margin: 2vh auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1vh;
+}
+
+.container > span:first-child {
+  font-size: 4vh;
+}
+
+.ue-flag {
+  background-color: #15358B;
+  height: 25vh;
+  width: 50vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ue-flag > span {
+  position: absolute;
+  font-size: 6vh;
+  font-family: sans-serif;
+  color: #D2D53C;
+  animation: scaling-125 2s linear infinite alternate, color-to-E7EA6B 2s linear infinite alternate;
+}
+
+.star-circle {
+  height: 20vh;
+  width: 20vh;
+  animation: rotation-full 60s linear infinite;
+}
+
+div[id^="star-positioning-"] {
+  position: absolute;
+  height: 20vh;
+  width: 20vh;
+}
+
+.star-svg {
+  height: 2vh;
+  width: 2vh;
+  display: block;
+  margin: auto;
+  filter: invert(89%) sepia(53%) saturate(596%) hue-rotate(0deg) brightness(85%) contrast(97%);
+}
+
+div[id^="star-positioning-"]:nth-child(odd) > .star-svg {
+  animation: rotation-full 2s linear infinite;
+}
+
+div[id^="star-positioning-"]:nth-child(even) > .star-svg {
+  animation: rotation-full 2s linear infinite reverse;
+}
+
+#star-positioning-01 { transform: rotate(0.05turn);}
+#star-positioning-02 { transform: rotate(0.1turn);}
+#star-positioning-03 { transform: rotate(0.15turn);}
+#star-positioning-04 { transform: rotate(0.2turn);}
+#star-positioning-05 { transform: rotate(0.25turn);}
+#star-positioning-06 { transform: rotate(0.3turn);}
+#star-positioning-07 { transform: rotate(0.35turn);}
+#star-positioning-08 { transform: rotate(0.4turn);}
+#star-positioning-09 { transform: rotate(0.45turn);}
+#star-positioning-10 { transform: rotate(0.5turn);}
+#star-positioning-11 { transform: rotate(0.55turn);}
+#star-positioning-12 { transform: rotate(0.6turn);}
+#star-positioning-13 { transform: rotate(0.65turn);}
+#star-positioning-14 { transform: rotate(0.7turn);}
+#star-positioning-15 { transform: rotate(0.75turn);}
+#star-positioning-16 { transform: rotate(0.8turn);}
+#star-positioning-17 { transform: rotate(0.85turn);}
+#star-positioning-18 { transform: rotate(0.9turn);}
+#star-positioning-19 { transform: rotate(0.95turn);}
+#star-positioning-20 { transform: rotate(1turn);}

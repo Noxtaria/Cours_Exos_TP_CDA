@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Tableaux</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Accueil</a></li>
+        <li><a href="./table.html">Tableaux</a></li>
+        <li><a href="./form.html">Formulaires</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Mes Tableaux</h2>
+    <section>
+      <!-- Les Tableaux simples -->
+      <table border="1px" cellspacing="0">
+        <tr>
+          <td>A</td>
+          <td>B</td>
+          <td>C</td>
+          <td>D</td>
+        </tr>
+        <tr>
+          <td>E</td>
+          <td>F</td>
+        </tr>
+        <tr>
+          <td>G</td>
+          <td>H</td>
+          <td>I</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Espacement vertical avec retour à la ligne -->
+    <br>
+
+    <section>
+      <!-- Les tableaux délimités -->
+      <table border="1px" cellspacing="0">
+        <!-- Le titre des colonnes se met en général dans un thead -->
+        <thead>
+          <tr>
+            <!-- Avec des balises th et non td -->
+            <th>#</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Numéro de téléphone</th>
+          </tr>
+        </thead>
+
+        <!-- Le corps du tableau (son contenu) est dans le tbody -->
+        <tbody>
+          <tr>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+            <td>D</td>
+          </tr>
+          <tr>
+            <td>E</td>
+            <td>F</td>
+          </tr>
+          <tr>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+          </tr>
+        </tbody>
+
+        <!-- Si l'on veut une partie délimitant la fin du tableau, on peut faire un tfoot -->
+        <tfoot>
+          <tr>
+            <!-- Dans le cas où l'on veut qu'une cellule fasse X colonnes et non seulement une, 
+              on utilise l'attribut 'colspan' -->
+            <td colspan="3">Total</td>
+            <td>$199.99</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+  </main>
+  <footer></footer>
+</body>
+</html>

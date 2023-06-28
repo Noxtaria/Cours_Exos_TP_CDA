@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Formulaires</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Accueil</a></li>
+        <li><a href="./table.html">Tableaux</a></li>
+        <li><a href="./form.html">Formulaires</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <!-- Les formulaires simples -->
+      <form action="mailto:test@example.com" method="post">
+        <fieldset>
+          <legend>Base</legend>
+          <div>
+            <label for="firstname">Prénom: </label>
+            <input id="firstname" type="text" name="firstname" placeholder="John" required>
+          </div>
+          <div>
+            <label for="lastname">Nom de famille: </label>
+            <input id="lastname" type="text" name="lastname" placeholder="DUPONT" required>
+          </div>  
+          <div>
+            <label for="age">Age: </label>
+            <input id="age" type="number" value="1" name="age" min="0" max="200" step="0.5">
+          </div>  
+          <div>
+            <label for="email">Adresse mail: </label>
+            <input id="email" type="email" name="email" placeholder="test@example.com" required>
+          </div>  
+          <div>
+            <label for="birthDate">Date de naissance: </label>
+            <input id="birthDate" type="date" name="birthDate" min="2000-01-01" max="2025-12-31">
+          </div>  
+          <div>
+            <label for="score">Score: </label>
+            <input type="range" name="score" id="score" min="1" max="5" step="0.5">
+          </div>  
+          <div>
+            <label>Sexe: </label>
+            <input type="radio" name="gender" id="genderMale" value="male">
+            <label for="genderMale">Homme</label>
+            <input type="radio" name="gender" id="genderFemale" value="female">
+            <label for="genderFemale">Femme</label>
+            <input type="radio" name="gender" id="genderOther" value="other">
+            <label for="genderOther">Autre</label>
+          </div>
+          <div>
+            <label for="isAdmin">Etes-vous admin ? </label>
+            <input type="checkbox" name="isAdmin" id="isAdmin">
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Problème</legend>
+          <div>
+            <label for="problem">Intitulé du problème: </label>
+            <select name="problem" id="problem" required>
+              <option value="">Sélectionnez un choix</option>
+              <option value="connection">J'ai un problème de connexion</option>
+              <option value="billing">J'ai un problème de facturation</option>
+              <option value="delivery">J'ai un problème de livraison</option>
+            </select>
+          </div>
+          <div>
+            <label for="desc">Description</label> <br>
+            <textarea placeholder="Type something..." name="desc" id="desc" cols="30" rows="10"></textarea>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>QCM</legend>
+          <div>
+            <label for="qcm">QCM: </label>
+            <select name="qcm" id="qcm" multiple>
+              <optgroup label="Catégorie">
+                <option value="billing">Facturation</option>
+                <option value="delivery">Livraison</option>
+                <option value="connection">Connexion</option>
+                <option value="tech">Technique</option>
+              </optgroup>
+              <optgroup label="Animal">
+                <option value="cat">Chat</option>
+                <option value="fox">Renard</option>
+                <option value="dog">Chien</option>
+                <option value="cow">Vache</option>
+              </optgroup>
+            </select>
+          </div>
+          <div>
+            <label>Vos plats préférés: </label> <br>
+            <input type="checkbox" name="favMeal" id="pizza" value="pizza">
+            <label for="pizza">Pizza</label> <br>
+            <input type="checkbox" name="favMeal" id="cake" value="cake">
+            <label for="cake">Gâteau</label> <br>
+            <input type="checkbox" name="favMeal" id="salad" value="salad">
+            <label for="salad">Salade</label> <br>
+
+          </div>
+        </fieldset>
+        <div>
+          <button>Submit</button>
+        </div>     
+      </form>
+    </section>
+  </main>
+  <footer></footer>
+</body>
+</html>

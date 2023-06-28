@@ -1,0 +1,52 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  
+  gap: 10px;
+  
+  flex-wrap: wrap;
+  
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.612);
+  padding: 1rem 1.5rem;
+  border-radius: 100%;
+}
+
+#box01 {
+  background-color: red;
+  width: 100%;
+  height: calc(10% - 5px);
+}
+
+#box02 {
+  background-color: blue;
+  width: calc(10% - 5px);
+  height: calc(80% - 10px);
+}
+
+#box03 {
+  background-color: green;
+  width: calc(90% - 5px);
+  height: calc(80% - 10px);
+}
+
+#box04 {
+  background-color: orange;
+  width: 100%;
+  height: calc(10% - 5px);
+}
