@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Repository de Cours, Exercices et Corrections - Formation Concepteur Développeur d'Applications
 Bienvenue dans ce repository dédié à ma formation de Concepteur Développeur d'Applications. Ici, vous trouverez tous les cours, exercices, travaux pratiques et corrections que j'ai suivis et réalisés tout au long de ma formation. Ce README vous guidera à travers la structure et le contenu de ce repository.
 
@@ -35,6 +34,3 @@ Ce repository est principalement destiné à mon usage personnel et à la consol
 Si vous avez des questions sur le contenu du repository ou si vous avez besoin d'aide supplémentaire, n'hésitez pas à me contacter. Vous pouvez m'envoyer un message ou utiliser les canaux de communication indiqués dans mon profil.
 
 Je vous souhaite une excellente exploration de ce repository et une réussite dans votre parcours de Concepteur Développeur d'Applications !
-=======
-
->>>>>>> f7577a374fc6120ae9aa98ef7b271de02917c7a8

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Cours/Java/demo-java/pom.xml" />
+        <option value="$PROJECT_DIR$/Cours/cours_jee/demo_cours/pom.xml" />
+        <option value="$PROJECT_DIR$/Cours/cours_jee/correctionpatient/pom.xml" />
+        <option value="$PROJECT_DIR$/Cours/cours_jee/correction_produit/pom.xml" />
+        <option value="$PROJECT_DIR$/Cours/cours_jpa/demo_jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/Cours/cours_jpa/heritage_jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/Cours/demo-rest/pom.xml" />
+        <option value="$PROJECT_DIR$/Cours/cours-jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/Cours/cours-test/demo_base_test/pom.xml" />
+        <option value="$PROJECT_DIR$/Cours/cours-spring/spring-thymeleaf/pom.xml" />
+        <option value="$PROJECT_DIR$/Cours/cours-spring/spring-demo-context/lille/pom.xml" />
+        <option value="$PROJECT_DIR$/Cours/cours-spring/spring-demo-context/lille2/pom.xml" />
+        <option value="$PROJECT_DIR$/Cours/cours-spring/spring-demo-context/lille3/pom.xml" />
+        <option value="$PROJECT_DIR$/Cours/cours-spring/spring-demo-context/lille4/pom.xml" />
+        <option value="$PROJECT_DIR$/Cours/cours-spring/spring-demo-context/lille5/pom.xml" />
+        <option value="$PROJECT_DIR$/Cours/cours-spring/spring-demo-context/lille6/pom.xml" />
+        <option value="$PROJECT_DIR$/Cours/cours-spring/correction-todo-list-spring/pom.xml" />
+        <option value="$PROJECT_DIR$/Cours/cours-spring/correction-todo-list-spring-spring-data/pom.xml" />
+        <option value="$PROJECT_DIR$/Cours/cours_hibernate/demo_component/pom.xml" />
+        <option value="$PROJECT_DIR$/Cours/cours_hibernate/demo_hibernate/pom.xml" />
+        <option value="$PROJECT_DIR$/Exercices/exercices_jpa/tp_compte/pom.xml" />
+        <option value="$PROJECT_DIR$/Exercices/exercices_jpa/todolistV4/pom.xml" />
+        <option value="$PROJECT_DIR$/Exercices/exercices_jpa/todolist_v1/pom.xml" />
+        <option value="$PROJECT_DIR$/Exercices/exercices_jpa/todolist_v2/pom.xml" />
+        <option value="$PROJECT_DIR$/Exercices/exercices_jpa/todolist_v3/pom.xml" />
+        <option value="$PROJECT_DIR$/Exercices/exercices_hibernate/exercice_hibernate_1/pom.xml" />
+        <option value="$PROJECT_DIR$/Exercices/exercices_hibernate/exercice_hibernate_2/pom.xml" />
+        <option value="$PROJECT_DIR$/Exercices/exercices_hibernate/exercice_hibernate_a_corriger/pom.xml" />
+        <option value="$PROJECT_DIR$/Exercices/correction-petite-annonce/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="corretto-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

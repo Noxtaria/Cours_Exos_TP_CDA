@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="lille (4)" />
+        <module name="correctionproduit" />
+        <module name="lille (2)" />
+        <module name="heritage_all_in_one" />
+        <module name="lille (6)" />
+        <module name="todolistV4" />
+        <module name="exercice_hibernate (2)" />
+        <module name="demo_cours" />
+        <module name="demo-rest" />
+        <module name="correction-petite-annonce" />
+        <module name="todolist_v1 (2)" />
+        <module name="correction-todo-list (2)" />
+        <module name="lille (5)" />
+        <module name="demo-java" />
+        <module name="lille (3)" />
+        <module name="lille (7)" />
+        <module name="correctionpatient" />
+        <module name="exercice_hibernate (1)" />
+        <module name="demo_jpa" />
+        <module name="exercice_hibernate (3)" />
+        <module name="todolist_v1 (1)" />
+        <module name="lille (1)" />
+        <module name="todolist_v1 (3)" />
+        <module name="correction-todo-list (1)" />
+        <module name="component" />
+        <module name="compte_client_jpa" />
+        <module name="cours-jdbc" />
+        <module name="demo_hibernate" />
+        <module name="demo_base_test" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="correction-todo-list" target="17" />
+      <module name="exercice_hibernate" target="17" />
+      <module name="lille" target="1.5" />
+      <module name="todolist_v1" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="correction-petite-annonce" options="-parameters" />
+      <module name="correction-todo-list (1)" options="-parameters" />
+      <module name="correction-todo-list (2)" options="-parameters" />
+      <module name="demo-rest" options="-parameters" />
+      <module name="lille (1)" options="-parameters" />
+      <module name="lille (2)" options="-parameters" />
+      <module name="lille (3)" options="-parameters" />
+      <module name="lille (4)" options="-parameters" />
+      <module name="lille (5)" options="-parameters" />
+      <module name="lille (6)" options="-parameters" />
+      <module name="lille (7)" options="-parameters" />
+    </option>
+  </component>
+</project>

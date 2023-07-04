@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Cours/Java/demo-java/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/Java/demo-java/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-jdbc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-jdbc/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-spring/correction-todo-list-spring-spring-data/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-spring/correction-todo-list-spring-spring-data/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-spring/correction-todo-list-spring/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-spring/correction-todo-list-spring/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-spring/spring-demo-context/lille/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-spring/spring-demo-context/lille/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-spring/spring-demo-context/lille2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-spring/spring-demo-context/lille2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-spring/spring-demo-context/lille3/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-spring/spring-demo-context/lille3/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-spring/spring-demo-context/lille4/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-spring/spring-demo-context/lille4/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-spring/spring-demo-context/lille5/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-spring/spring-demo-context/lille5/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-spring/spring-demo-context/lille6/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-spring/spring-demo-context/lille6/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-spring/spring-thymeleaf/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-spring/spring-thymeleaf/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-test/demo_base_test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours-test/demo_base_test/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours_hibernate/demo_component/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours_hibernate/demo_component/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours_hibernate/demo_hibernate/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours_hibernate/demo_hibernate/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours_jee/correction_produit/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours_jee/correction_produit/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours_jee/correctionpatient/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours_jee/correctionpatient/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours_jee/demo_cours/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours_jee/demo_cours/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours_jpa/demo_jpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours_jpa/demo_jpa/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours_jpa/heritage_jpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/cours_jpa/heritage_jpa/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/demo-rest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Cours/demo-rest/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Exercices/correction-petite-annonce/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Exercices/correction-petite-annonce/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Exercices/exercices_hibernate/exercice_hibernate_1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Exercices/exercices_hibernate/exercice_hibernate_1/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Exercices/exercices_hibernate/exercice_hibernate_2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Exercices/exercices_hibernate/exercice_hibernate_2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Exercices/exercices_hibernate/exercice_hibernate_a_corriger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Exercices/exercices_hibernate/exercice_hibernate_a_corriger/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Exercices/exercices_jpa/todolistV4/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Exercices/exercices_jpa/todolistV4/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Exercices/exercices_jpa/todolist_v1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Exercices/exercices_jpa/todolist_v1/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Exercices/exercices_jpa/todolist_v2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Exercices/exercices_jpa/todolist_v2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Exercices/exercices_jpa/todolist_v3/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Exercices/exercices_jpa/todolist_v3/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Exercices/exercices_jpa/tp_compte/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Exercices/exercices_jpa/tp_compte/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
