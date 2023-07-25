@@ -1,0 +1,16 @@
+services:
+  front:
+    #image: imageName
+    build: ./app-react-todo
+    ports:
+      - 3000:80
+    environment:
+      - env1=value1
+    volumes:
+      - data:/data
+    networks:
+      - network1
+volumes:
+  data:
+networks:
+  network1:

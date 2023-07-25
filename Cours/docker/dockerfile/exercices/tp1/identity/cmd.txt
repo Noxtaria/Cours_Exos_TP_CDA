@@ -1,0 +1,2 @@
+docker build -t identity-image .
+docker run -d --name identity-container -p 8080:80 identity-image
