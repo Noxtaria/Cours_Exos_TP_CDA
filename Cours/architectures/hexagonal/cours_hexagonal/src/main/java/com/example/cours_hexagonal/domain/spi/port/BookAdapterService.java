@@ -5,7 +5,7 @@ import com.example.cours_hexagonal.domain.entity.Book;
 import java.util.List;
 
 public interface BookAdapterService {
-    void save(Book book);
-    Book getBookById(Book book);
+    void save(String title, String author);
+    Book getBookById(int id);
     List<Book> getBooks();
 }
