@@ -25,7 +25,7 @@ public class Calculatrice extends JFrame implements ActionListener {
         setResizable(false);
 
         currentInput = "";
-        firstOperand = 0.0;
+        firstOperand = 0;
         operator = "";
 
         JPanel = new JPanel();
@@ -104,7 +104,7 @@ public class Calculatrice extends JFrame implements ActionListener {
 
         if (source == clearButton) {
             currentInput = "";
-            firstOperand = 0.0;
+            firstOperand = 0;
             operator = "";
             textField.setText("");
         }
@@ -118,7 +118,7 @@ public class Calculatrice extends JFrame implements ActionListener {
         if (source == equalButton) {
             if (!operator.isEmpty() && !currentInput.isEmpty()) {
                 double secondOperand = Double.parseDouble(currentInput);
-                double result = 0.0;
+                double result = 0;
                 switch (operator) {
                     case "+":
                         result = firstOperand + secondOperand;
@@ -138,6 +138,10 @@ public class Calculatrice extends JFrame implements ActionListener {
                         }
                         break;
                 }
+                textField.setText(String.valueOf(result));
+                currentInput = "";
+                firstOperand = result;
+                operator = "";
             }
         }
     }
