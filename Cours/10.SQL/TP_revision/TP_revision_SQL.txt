@@ -1,0 +1,42 @@
+# TP Révision SQL 
+
+Titre du TP: Gestion d'un magasin en ligne avec SQL
+
+Objectif: Dans ce TP, exporer des concepts avancés de SQL tels que 
+les vues et les jointures pour gérer un magasin en ligne. 
+But du TP : créer et manipuler des tables pour stocker et organiser les informations pertinentes sur les produits,
+ les clients et les commandes.
+
+Plan du TP:
+
+    Création de la base de données
+        Création des tables nécessaires pour le magasin en ligne
+            Produits (id, nom, prix, stock, categorie_id)
+            Catégories (id, nom)
+            Clients (id, nom, prenom, email)
+            Commandes (id, clinet_id,date, statut)
+            Lignes de commande (id, commande_id,produit_id,quantite)
+        Ajout de clés primaires et étrangères pour assurer l'intégrité des données
+        Insertion de données de test
+
+    Requêtes simples
+        Sélection des produits par nom, catégorie, prix, etc.
+        Affichage des clients et de leurs commandes
+        Filtrage des commandes en fonction de la date, du montant total ou du statut
+
+    Utilisation des fonctions d'agrégation 
+            Détermination du chiffre d'affaires pour une période donnée
+            Calcul du prix moyen des produits d'une catégorie
+ 
+
+    Requêtes avancées et vues
+        Création de vues pour simplifier l'accès aux données
+            Vue des commandes avec le détail des produits et des montants
+            Vue des produits les plus vendus
+            Vue des clients les plus dépensiers
+
+
+    Exercices supplémentaires
+        Recherche des produits ayant un stock inférieur à un seuil donné
+        Identification des clients n'ayant passé aucune commande durant une période spécifique
+        Analyse des préférences d'achat des clients en fonction des catégories de produits

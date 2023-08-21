@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+  my-mysql:
+    image: mysql:latest
+    container_name: my-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_DATABASE: tododb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: 12345
+    ports:
+      - "3307:3306"
+    networks:
+      - spring-network
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  my-spring-boot-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: my-spring-boot-app
+    restart: always
+    ports:
+      - "8090:8080"
+    networks:
+      - spring-network
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://my-mysql:3306/tododb?autoReconnect=true&useSSL=false
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
+    depends_on:
+      - my-mysql
+
+volumes:
+  mysql_data:
+
+networks:
+  spring-network:   
+    driver: bridge
+
+
+

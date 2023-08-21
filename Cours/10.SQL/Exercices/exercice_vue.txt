@@ -1,0 +1,26 @@
+Cree une table eleve avec :
+avec les colonnes :
+id_eleve,
+nom,
+prenom,
+age
+
+Cree une table controle avec :
+avec les colonnes :
+id_eleve,
+code_matiere,
+date_controel,
+note
+
+Cree une table matiere avec :
+avec les colonnes :
+code_matiere,
+nom_matiere,
+coef_matiere
+
+1- Créer les tables en précisant les clés primaires et étrangères.
+2- Créer les contraintes qui imposent que l’âge de l’élève soit entre 17 et 23 et que la note du contrôle soit entre 0 et 20.
+3- Insérer des lignes dans les tables.
+4- Afficher le nombre de contrôles passés par élève en mathématiques.
+5- Créer une vue V_Moyenne_Matière qui permet d’afficher la moyenne de chaque élève (Id,Nom,Prénom) Par matière (NomMat, Coef).
+6-Créer une vue V_Moyenne_Générale qui permet d’afficher la moyenne générale de chaque élève (Id,Nom,Prénom).
