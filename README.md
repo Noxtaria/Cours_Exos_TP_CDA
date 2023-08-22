@@ -26,11 +26,3 @@ Si vous souhaitez pratiquer vos compétences, rendez-vous dans la section Exerci
 Si vous préférez vous plonger dans des projets plus substantiels, la section Travaux Pratiques (TP) est faite pour vous. Chaque TP est une occasion d'appliquer les connaissances acquises dans des scénarios réels.
 
 Si vous avez déjà résolu certains exercices ou travaux pratiques et souhaitez vérifier vos réponses, dirigez-vous vers la section Corrections. Vous y trouverez les solutions détaillées et les bonnes pratiques associées.
-
-## Contributions
-Ce repository est principalement destiné à mon usage personnel et à la consolidation de mes connaissances en tant que Concepteur Développeur d'Applications. Par conséquent, je n'accepte pas les contributions externes pour le moment. Cependant, n'hésitez pas à vous inspirer du contenu et à l'utiliser comme référence pour vos propres projets.
-
-## Besoin d'aide supplémentaire ?
-Si vous avez des questions sur le contenu du repository ou si vous avez besoin d'aide supplémentaire, n'hésitez pas à me contacter. Vous pouvez m'envoyer un message ou utiliser les canaux de communication indiqués dans mon profil.
-
-Je vous souhaite une excellente exploration de ce repository et une réussite dans votre parcours de Concepteur Développeur d'Applications !
