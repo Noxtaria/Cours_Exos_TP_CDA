@@ -8,84 +8,58 @@ import java.awt.event.ActionListener;
 public class Calculatrice extends JFrame implements ActionListener {
 
     private JTextField textField;
-    private JButton[] numberButtons;
-    private JButton[] operationButtons;
-    private JButton addButton, subButton, mulButton, divButton;
-    private JButton equalButton, clearButton;
-    private JPanel JPanel;
+    private JButton[][] buttons;
+    private JPanel panel;
 
-    private String currentInput;
-    private double firstOperand;
-    private String operator;
+    private String currentInput = "";
+    private double firstOperand = 0;
+    private String operator = "";
 
     public Calculatrice() {
         setTitle("CASIO");
-        setSize(400,500);
+        setSize(400, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
 
-        currentInput = "";
-        firstOperand = 0;
-        operator = "";
-
-        JPanel = new JPanel();
-        JPanel.setLayout(new GridLayout(5, 4));
+        panel = new JPanel();
+        panel.setLayout(new GridLayout(5, 4, 5, 5));
 
         textField = new JTextField();
-        textField.setFont(new Font("Arial", Font.PLAIN, 24));
+        textField.setFont(new Font("Arial", Font.PLAIN, 40));
         textField.setHorizontalAlignment(JTextField.RIGHT);
         textField.setEditable(false);
+        textField.setPreferredSize(new Dimension(400, 100));
+        textField.setBackground(Color.BLACK);
+        textField.setForeground(Color.WHITE);
 
-        numberButtons = new JButton[10];
-        for (int i = 0; i < 10; i++) {
-            numberButtons[i] = new JButton(String.valueOf(i));
-            numberButtons[i].setFont(new Font("Arial", Font.PLAIN, 24));
-            numberButtons[i].addActionListener(this);
+        buttons = new JButton[5][4];
+
+        String[][] buttonLabels = {
+                {"C", "+/-", "%", "/"},
+                {"7", "8", "9", "*"},
+                {"4", "5", "6", "-"},
+                {"1", "2", "3", "+"},
+                {"0", "", ",", "="}
+        };
+
+        for (int row = 0; row < 5; row++) {
+            for (int col = 0; col < 4; col++) {
+                buttons[row][col] = new JButton(buttonLabels[row][col]);
+                buttons[row][col].setFont(new Font("Arial", Font.PLAIN, 24));
+                if (buttonLabels[row][col].equals("+") || buttonLabels[row][col].equals("-")
+                        || buttonLabels[row][col].equals("*") || buttonLabels[row][col].equals("/")
+                        || buttonLabels[row][col].equals("=")){
+                    buttons[row][col].setBackground(Color.ORANGE);
+                } else {
+                    buttons[row][col].setBackground(Color.LIGHT_GRAY);
+                }
+                buttons[row][col].addActionListener(this);
+                panel.add(buttons[row][col]);
+            }
         }
-
-        operationButtons = new JButton[4];
-        addButton = new JButton("+");
-        subButton = new JButton("-");
-        mulButton = new JButton("*");
-        divButton = new JButton("/");
-
-        operationButtons[0] = addButton;
-        operationButtons[1] = subButton;
-        operationButtons[2] = mulButton;
-        operationButtons[3] = divButton;
-
-        for (JButton button : operationButtons) {
-            button.setFont(new Font("Arial", Font.PLAIN, 24));
-            button.addActionListener(this);
-        }
-
-        equalButton = new JButton("=");
-        equalButton.setFont(new Font("Arial", Font.PLAIN, 24));
-        equalButton.addActionListener(this);
-
-        clearButton = new JButton("C");
-        clearButton.setFont(new Font("Arial", Font.PLAIN, 24));
-        clearButton.addActionListener(this);
-
-        JPanel.add(numberButtons[7]);
-        JPanel.add(numberButtons[8]);
-        JPanel.add(numberButtons[9]);
-        JPanel.add(divButton);
-        JPanel.add(numberButtons[4]);
-        JPanel.add(numberButtons[5]);
-        JPanel.add(numberButtons[6]);
-        JPanel.add(mulButton);
-        JPanel.add(numberButtons[1]);
-        JPanel.add(numberButtons[2]);
-        JPanel.add(numberButtons[3]);
-        JPanel.add(subButton);
-        JPanel.add(numberButtons[0]);
-        JPanel.add(clearButton);
-        JPanel.add(equalButton);
-        JPanel.add(addButton);
 
         add(textField, BorderLayout.NORTH);
-        add(JPanel);
+        add(panel);
 
         setVisible(true);
     }
@@ -93,56 +67,87 @@ public class Calculatrice extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
+        String buttonLabel = e.getActionCommand();
 
-        for (int i = 0; i < 10; i++) {
-            if (source == numberButtons[i]) {
-                currentInput += i;
-                textField.setText(currentInput);
-                return;
-            }
-        }
+        switch (buttonLabel) {
+            case "0":
+            case "1":
+            case "2":
+            case "3":
+            case "4":
+            case "5":
+            case "6":
+            case "7":
+            case "8":
+            case "9":
+                currentInput += buttonLabel;
+                break;
 
-        if (source == clearButton) {
-            currentInput = "";
-            firstOperand = 0;
-            operator = "";
-            textField.setText("");
-        }
-
-        if (source == addButton || source == subButton || source == mulButton || source == divButton) {
-            operator = e.getActionCommand();
-            firstOperand = Double.parseDouble(currentInput);
-            currentInput = "";
-        }
-
-        if (source == equalButton) {
-            if (!operator.isEmpty() && !currentInput.isEmpty()) {
-                double secondOperand = Double.parseDouble(currentInput);
-                double result = 0;
-                switch (operator) {
-                    case "+":
-                        result = firstOperand + secondOperand;
-                        break;
-                    case "-":
-                        result = firstOperand - secondOperand;
-                        break;
-                    case "*":
-                        result = firstOperand * secondOperand;
-                        break;
-                    case "/":
-                        if (secondOperand != 0) {
-                            result = firstOperand / secondOperand;
-                        } else {
-                            textField.setText("Error");
-                            return;
-                        }
-                        break;
+            case ",":
+                if (!currentInput.contains(",")) {
+                    currentInput += ",";
                 }
-                textField.setText(String.valueOf(result));
+                break;
+
+            case "C":
                 currentInput = "";
-                firstOperand = result;
+                firstOperand = 0;
                 operator = "";
-            }
+                break;
+
+            case "+/-":
+                if (!currentInput.isEmpty()) {
+                    double value = Double.parseDouble(currentInput);
+                    value = -value;
+                    currentInput = String.valueOf(value);
+                }
+                break;
+
+            case "%":
+                if (!currentInput.isEmpty()) {
+                    double value = Double.parseDouble(currentInput);
+                    value /= 100;
+                    currentInput = String.valueOf(value);
+                }
+                break;
+
+            case "+":
+            case "-":
+            case "*":
+            case "/":
+                operator = buttonLabel;
+                firstOperand = Double.parseDouble(currentInput);
+                currentInput = "";
+                break;
+
+            case "=":
+                if (!operator.isEmpty() && !currentInput.isEmpty()) {
+                    double secondOperand = Double.parseDouble(currentInput);
+                    double result = 0;
+                    switch (operator) {
+                        case "+":
+                            result = firstOperand + secondOperand;
+                            break;
+                        case "-":
+                            result = firstOperand - secondOperand;
+                            break;
+                        case "*":
+                            result = firstOperand * secondOperand;
+                            break;
+                        case "/":
+                            if (secondOperand != 0) {
+                                result = firstOperand / secondOperand;
+                            } else {
+                                textField.setText("Error");
+                                return;
+                            }
+                            break;
+                    }
+                    currentInput = String.valueOf(result);
+                }
+                break;
         }
+
+        textField.setText(currentInput);
     }
 }
