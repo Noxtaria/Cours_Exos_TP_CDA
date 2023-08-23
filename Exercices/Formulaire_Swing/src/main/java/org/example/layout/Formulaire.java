@@ -26,7 +26,7 @@ public class Formulaire extends JFrame implements ActionListener {
     private JButton detailsButton;
 
     public Formulaire() {
-        setTitle("Formulaire d'ajout");
+        setTitle("Complex Two Panel Example");
         setSize(400, 550);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -50,18 +50,24 @@ public class Formulaire extends JFrame implements ActionListener {
         nameField = new JTextField(20);
 
         gbc.gridy = 1;
+        gbc.gridx = 0;
+        gbc.anchor = GridBagConstraints.EAST;
         mainPanel.add(nameLabel, gbc);
 
-        gbc.gridy = 2;
+        gbc.gridx = 1;
+        gbc.anchor = GridBagConstraints.WEST;
         mainPanel.add(nameField, gbc);
 
         JLabel emailLabel = new JLabel("Email:");
         emailField = new JTextField(20);
 
-        gbc.gridy = 3;
+        gbc.gridy = 2;
+        gbc.gridx = 0;
+        gbc.anchor = GridBagConstraints.EAST;
         mainPanel.add(emailLabel, gbc);
 
-        gbc.gridy = 4;
+        gbc.gridx = 1;
+        gbc.anchor = GridBagConstraints.WEST;
         mainPanel.add(emailField, gbc);
 
         JLabel genderLabel = new JLabel("Genre:");
@@ -71,14 +77,24 @@ public class Formulaire extends JFrame implements ActionListener {
         genderButtonGroup.add(maleRadioButton);
         genderButtonGroup.add(femaleRadioButton);
 
-        JPanel genderPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        JPanel genderPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+
+        int horizontalSpace = 20;
+        genderPanel.add(Box.createHorizontalStrut(horizontalSpace));
+
         genderPanel.add(maleRadioButton);
+
+        genderPanel.add(Box.createHorizontalStrut(horizontalSpace));
+
         genderPanel.add(femaleRadioButton);
 
-        gbc.gridy = 5;
+        gbc.gridy = 3;
+        gbc.gridx = 0;
+        gbc.anchor = GridBagConstraints.EAST;
         mainPanel.add(genderLabel, gbc);
 
-        gbc.gridy = 6;
+        gbc.gridx = 1;
+        gbc.anchor = GridBagConstraints.WEST;
         mainPanel.add(genderPanel, gbc);
 
         addButton = new JButton("Ajouter");
