@@ -4,6 +4,7 @@ import org.example.entity.Person;
 
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,19 +19,29 @@ public class Formulaire extends JFrame implements ActionListener {
     private ButtonGroup genderButtonGroup;
     private ArrayList<Person> peopleList;
 
+    private DefaultTableModel tableModel;
+    private JTable dataTable;
+
+    private JButton addButton;
+    private JButton detailsButton;
+
     public Formulaire() {
         setTitle("Formulaire d'ajout");
-        setSize(400, 300);
+        setSize(400, 550);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        TitledBorder titledBorder = BorderFactory.createTitledBorder("Formulaire d'ajout");
-        titledBorder.setTitleFont(new Font("Arial", Font.PLAIN, 14));
-        titledBorder.setTitleColor(Color.BLACK);
+        TitledBorder formBorder = BorderFactory.createTitledBorder("Formulaire d'ajout");
+        formBorder.setTitleFont(new Font("Arial", Font.PLAIN, 14));
+        formBorder.setTitleColor(Color.BLACK);
+
+        TitledBorder tableBorder = BorderFactory.createTitledBorder("Tableau des données");
+        tableBorder.setTitleFont(new Font("Arial", Font.PLAIN, 14));
+        tableBorder.setTitleColor(Color.BLACK);
 
         peopleList = new ArrayList<>();
 
         JPanel mainPanel = new JPanel(new GridBagLayout());
-        mainPanel.setBorder(titledBorder); // Ajoute le titled border au panneau principal
+        mainPanel.setBorder(formBorder);
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.insets = new Insets(5, 5, 5, 5);
@@ -70,32 +81,70 @@ public class Formulaire extends JFrame implements ActionListener {
         gbc.gridy = 6;
         mainPanel.add(genderPanel, gbc);
 
-        JButton addButton = new JButton("Ajouter");
+        addButton = new JButton("Ajouter");
         addButton.addActionListener(this);
 
         gbc.gridy = 7;
         gbc.gridwidth = 2;
         mainPanel.add(addButton, gbc);
 
-        add(mainPanel);
+        tableModel = new DefaultTableModel();
+        tableModel.addColumn("Nom");
+        tableModel.addColumn("Email");
+        tableModel.addColumn("Genre");
+
+        dataTable = new JTable(tableModel);
+
+        JPanel tablePanel = new JPanel(new BorderLayout());
+        tablePanel.setBorder(tableBorder);
+        tablePanel.add(new JScrollPane(dataTable), BorderLayout.CENTER);
+
+        detailsButton = new JButton("Détails");
+        detailsButton.addActionListener(this);
+
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        buttonPanel.add(detailsButton);
+
+        Container contentPane = getContentPane();
+        contentPane.setLayout(new BorderLayout());
+        contentPane.add(mainPanel, BorderLayout.NORTH);
+        contentPane.add(tablePanel, BorderLayout.CENTER);
+        contentPane.add(buttonPanel, BorderLayout.SOUTH);
 
         setVisible(true);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() instanceof JButton && e.getActionCommand().equals("Ajouter")) {
-            String name = nameField.getText();
-            String email = emailField.getText();
-            String gender = maleRadioButton.isSelected() ? "Homme" : "Femme";
+        if (e.getSource() instanceof JButton) {
+            JButton clickedButton = (JButton) e.getSource();
+            if (clickedButton == addButton) {
+                String name = nameField.getText();
+                String email = emailField.getText();
+                String gender = maleRadioButton.isSelected() ? "Homme" : "Femme";
 
-            Person person = new Person(name, email, gender);
-            peopleList.add(person);
+                Person person = new Person(name, email, gender);
+                peopleList.add(person);
 
-            nameField.setText("");
-            emailField.setText("");
-            genderButtonGroup.clearSelection();
+                Object[] rowData = {name, email, gender};
+                tableModel.addRow(rowData);
+
+                nameField.setText("");
+                emailField.setText("");
+                genderButtonGroup.clearSelection();
+            } else if (clickedButton == detailsButton) {
+                int selectedRow = dataTable.getSelectedRow();
+                if (selectedRow != -1) {
+                    String name = (String) tableModel.getValueAt(selectedRow, 0);
+                    String email = (String) tableModel.getValueAt(selectedRow, 1);
+                    String gender = (String) tableModel.getValueAt(selectedRow, 2);
+                    JOptionPane.showMessageDialog(this, "Détails:\nNom: " + name + "\nEmail: " + email + "\nGenre: " + gender);
+                } else {
+                    JOptionPane.showMessageDialog(this, "Sélectionnez une ligne dans le tableau.");
+                }
+            }
         }
     }
+
 
 }
