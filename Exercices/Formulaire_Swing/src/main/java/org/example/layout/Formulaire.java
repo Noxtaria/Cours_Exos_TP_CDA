@@ -3,6 +3,7 @@ package org.example.layout;
 import org.example.entity.Person;
 
 import javax.swing.*;
+import javax.swing.border.TitledBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,9 +23,14 @@ public class Formulaire extends JFrame implements ActionListener {
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        TitledBorder titledBorder = BorderFactory.createTitledBorder("Formulaire d'ajout");
+        titledBorder.setTitleFont(new Font("Arial", Font.PLAIN, 14));
+        titledBorder.setTitleColor(Color.BLACK);
+
         peopleList = new ArrayList<>();
 
         JPanel mainPanel = new JPanel(new GridBagLayout());
+        mainPanel.setBorder(titledBorder); // Ajoute le titled border au panneau principal
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.insets = new Insets(5, 5, 5, 5);
@@ -78,7 +84,18 @@ public class Formulaire extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (e.getSource() instanceof JButton && e.getActionCommand().equals("Ajouter")) {
+            String name = nameField.getText();
+            String email = emailField.getText();
+            String gender = maleRadioButton.isSelected() ? "Homme" : "Femme";
 
+            Person person = new Person(name, email, gender);
+            peopleList.add(person);
+
+            nameField.setText("");
+            emailField.setText("");
+            genderButtonGroup.clearSelection();
+        }
     }
 
 }
