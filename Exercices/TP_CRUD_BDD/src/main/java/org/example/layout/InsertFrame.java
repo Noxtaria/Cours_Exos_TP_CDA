@@ -46,7 +46,6 @@ public class InsertFrame extends JFrame implements ActionListener {
                 String number = numberField.getText();
 
                 contactDatabase.insertContact(name, number);
-                mainFrame.refreshContacts();
                 dispose();
 
                 JOptionPane.showMessageDialog(mainFrame, "Contact created successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);

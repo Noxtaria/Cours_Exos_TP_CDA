@@ -50,8 +50,7 @@ public class UpdateFrame extends JFrame implements ActionListener {
                 String newName = nameField.getText();
                 String newNumber = numberField.getText();
 
-                contactDatabase.updateContact(id, newName, newNumber);
-                mainFrame.refreshContacts();
+                contactDatabase.updateContact((long) id, newName, newNumber);
                 dispose();
 
                 JOptionPane.showMessageDialog(mainFrame, "Contact updated successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);

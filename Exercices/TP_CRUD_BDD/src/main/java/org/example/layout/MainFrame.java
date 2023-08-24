@@ -1,11 +1,13 @@
 package org.example.layout;
 
 import org.example.ContactDatabase;
+import org.example.entity.Contact;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 public class MainFrame extends JFrame implements ActionListener {
     private JButton insertButton = new JButton("Insert");
@@ -13,9 +15,11 @@ public class MainFrame extends JFrame implements ActionListener {
     private JButton deleteButton = new JButton("Delete");
     private JButton searchButton = new JButton("Search");
 
-    private ContactDatabase contactDatabase = new ContactDatabase();
+    private ContactDatabase contactDatabase;
 
-    public MainFrame() {
+    public MainFrame(ContactDatabase contactDatabase) {
+        this.contactDatabase = contactDatabase;
+
         setTitle("Contact CRUD App");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 100);
@@ -44,19 +48,8 @@ public class MainFrame extends JFrame implements ActionListener {
         } else if (e.getSource() == deleteButton) {
             new DeleteFrame(contactDatabase, this);
         } else if (e.getSource() == searchButton) {
-            new SelectFrame(contactDatabase);
+            List<Contact> contacts = contactDatabase.getAllContacts();
+            new SelectFrame(contacts);
         }
-    }
-
-    public void refreshContacts() {
-        // Update the contact list or perform any other necessary refresh
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                new MainFrame();
-            }
-        });
     }
 }

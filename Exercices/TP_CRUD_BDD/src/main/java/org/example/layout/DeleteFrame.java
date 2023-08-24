@@ -41,8 +41,7 @@ public class DeleteFrame extends JFrame implements ActionListener {
             if (choice == JOptionPane.YES_OPTION) {
                 int id = Integer.parseInt(idField.getText());
 
-                contactDatabase.deleteContact(id);
-                mainFrame.refreshContacts();
+                contactDatabase.deleteContact((long) id);
                 dispose();
 
                 JOptionPane.showMessageDialog(mainFrame, "Contact deleted successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
