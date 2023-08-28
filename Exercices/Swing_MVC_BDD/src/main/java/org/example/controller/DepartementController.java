@@ -1,6 +1,5 @@
 package org.example.controller;
 
-
 import org.example.dao.DepartementDAO;
 import org.example.model.Departement;
 import org.example.view.DepartementUI;
@@ -16,7 +15,7 @@ public class DepartementController {
         this.departementUI.addCreateDepartementListener(event -> createDepartement());
     }
 
-    private void createDepartement() {
+    public void createDepartement() {
         String name = departementUI.getDepartementName();
         Departement departement = new Departement(name);
         departementDAO.create(departement);

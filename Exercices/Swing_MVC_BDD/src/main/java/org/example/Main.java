@@ -17,11 +17,12 @@ public class Main {
 
             DepartementUI departementUI = new DepartementUI();
             DepartementController departementController = new DepartementController(departementUI, departementDAO);
-//            departementUI.setVisible(true);
+
 
             SalarieUI salarieUI = new SalarieUI();
             SalarieController salarieController = new SalarieController(salarieUI, salarieDAO);
-            salarieUI.setVisible(true);
+
         });
     }
 }
+
