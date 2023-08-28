@@ -15,7 +15,7 @@ public class ToDoList extends JFrame implements ActionListener {
     private JButton completeButton;
 
     public ToDoList() {
-        setTitle("ToDoList App");
+        setTitle("ToDo-List App");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 300);
         setLocationRelativeTo(null);
